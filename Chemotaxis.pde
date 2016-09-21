@@ -1,11 +1,15 @@
- //declare bacteria variables here   
+int myX, myY, myR, myG, myB;
+Bacteria MRSA;
+
  void setup()   
  {     
- 	//initialize bacteria variables here   
+ 	myX = 0+
  }   
  void draw()   
  {    
- 	//move and show the bacteria   
+ 	//move and show the bacteria 
+ 	Bacteria MRSA = new Bacteria;
+ 	MRSA.show  
  }  
  class Bacteria    
  {     
