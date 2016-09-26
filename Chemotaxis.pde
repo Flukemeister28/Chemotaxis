@@ -1,5 +1,6 @@
 int myX, myY, myR, myG, myB;
 Bacteria [] MRSA;
+Prey Antelope;
 
  void setup()   
  {
@@ -9,6 +10,7 @@ Bacteria [] MRSA;
  	{
  		MRSA[i] = new Bacteria ((int)(Math.random()*600),(int)(Math.random()*600));
  	}
+ 	Antelope = new Prey(x,y);
  }   
  void draw()   
  {    
@@ -53,3 +55,14 @@ Bacteria [] MRSA;
  		ellipse(myX,myY,10,10);
  	}
  }    
+ class Prey ()
+ {
+ 	int myX,myY,myColor;
+ 	Prey (int x, int y)
+ 	{
+ 		myX = x;
+ 		myY = y;
+ 		myColor = ((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
+
+ 	}
+  }
