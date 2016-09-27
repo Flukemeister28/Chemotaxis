@@ -10,30 +10,31 @@ Prey Antelope;
  	{
  		MRSA[i] = new Bacteria ((int)(Math.random()*600),(int)(Math.random()*600));
  	}
- 	Antelope = new Prey(x,y);
+ 	Antelope = new Prey((int)(Math.random()*600),(int)(Math.random()*600));
  }   
  void draw()   
  {    
  	//move and show the bacteria 
- 	background ((int)(Math.random()*30+5));
+ 	background (0);
  	for (int i = 0; i < MRSA.length; i++)
  	{
  		MRSA[i].show();
  		MRSA[i].move();
  	}
+ 	Antelope.show();
+ 	Antelope.move();
  }  
  void mousePressed()
  {
  	redraw();
- 	MRSA = new Bacteria[25];
+ 	MRSA = new Bacteria[10000];
  	for (int i = 0; i <MRSA.length; i++)
  	{
  		MRSA[i] = new Bacteria ((int)(Math.random()*600),(int)(Math.random()*600));
  	}
  }
  class Bacteria    
- {     
- 	//lots of java!   
+ {       
  	int myX,myY,myR,myG,myB;
  	Bacteria (int x, int y)
  	{
@@ -45,8 +46,22 @@ Prey Antelope;
  	}
  	void move ()
  	{
- 		myX = myX + (int)(Math.random()*4-2);
- 		myY = myY + (int)(Math.random()*4-2);
+ 		if (myX < Antelope.myX)
+ 			{
+ 				myX = myX + (int)(Math.random()*4-1);
+ 			}
+ 		else if (myX > Antelope.myX)
+ 			{
+ 				myX = myX + (int)(Math.random()*4-3);
+ 			}
+ 		if (myY < Antelope.myY)
+ 			{
+ 				myY = myY + (int)(Math.random()*4-1);
+ 			}
+ 		else if (myY > Antelope.myY)
+ 			{
+ 				myY = myY + (int)(Math.random()*4-3);
+ 			}
  	}
  	void show ()
  	{
@@ -55,14 +70,27 @@ Prey Antelope;
  		ellipse(myX,myY,10,10);
  	}
  }    
- class Prey ()
+ class Prey
  {
- 	int myX,myY,myColor;
+ 	int myX,myY,myR,myG,myB;
  	Prey (int x, int y)
  	{
  		myX = x;
  		myY = y;
- 		myColor = ((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
+ 		myR = (int)(Math.random()*255);
+ 		myG = (int)(Math.random()*255);
+ 		myB = (int)(Math.random()*255);
 
+ 	}
+ 	void move ()
+ 	{
+ 		myX = myX + (int)(Math.random()*6-3);
+		myY = myY +(int)(Math.random()*6-3);
+ 	}
+ 	void show ()
+ 	{
+ 		noStroke();
+ 		fill (myR,myG,myB);
+ 		rect (myX,myY,15,15);
  	}
   }
