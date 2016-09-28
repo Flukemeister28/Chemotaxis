@@ -5,7 +5,7 @@ Prey Antelope;
  void setup()   
  {
  	size (600,600);
- 	MRSA = new Bacteria[25];
+ 	MRSA = new Bacteria[10];
  	for (int i = 0; i <MRSA.length; i++)
  	{
  		MRSA[i] = new Bacteria ((int)(Math.random()*600),(int)(Math.random()*600));
@@ -27,11 +27,12 @@ Prey Antelope;
  void mousePressed()
  {
  	redraw();
- 	MRSA = new Bacteria[10000];
+ 	MRSA = new Bacteria[10];
  	for (int i = 0; i <MRSA.length; i++)
  	{
  		MRSA[i] = new Bacteria ((int)(Math.random()*600),(int)(Math.random()*600));
  	}
+ 	Antelope = new Prey((int)(Math.random()*600),(int)(Math.random()*600));
  }
  class Bacteria    
  {       
@@ -46,19 +47,19 @@ Prey Antelope;
  	}
  	void move ()
  	{
- 		if (myX < Antelope.myX)
+ 		if (myX < Antelope.myPX)
  			{
  				myX = myX + (int)(Math.random()*4-1);
  			}
- 		else if (myX > Antelope.myX)
+ 		else if (myX > Antelope.myPX)
  			{
  				myX = myX + (int)(Math.random()*4-3);
  			}
- 		if (myY < Antelope.myY)
+ 		if (myY < Antelope.myPY)
  			{
  				myY = myY + (int)(Math.random()*4-1);
  			}
- 		else if (myY > Antelope.myY)
+ 		else if (myY > Antelope.myPY)
  			{
  				myY = myY + (int)(Math.random()*4-3);
  			}
@@ -72,11 +73,11 @@ Prey Antelope;
  }    
  class Prey
  {
- 	int myX,myY,myR,myG,myB;
+ 	int myPX,myPY,myR,myG,myB;
  	Prey (int x, int y)
  	{
- 		myX = x;
- 		myY = y;
+ 		myPX = x;
+ 		myPY = y;
  		myR = (int)(Math.random()*255);
  		myG = (int)(Math.random()*255);
  		myB = (int)(Math.random()*255);
@@ -84,13 +85,35 @@ Prey Antelope;
  	}
  	void move ()
  	{
- 		myX = myX + (int)(Math.random()*6-3);
-		myY = myY +(int)(Math.random()*6-3);
+ 		if ((Math.abs(myPX - MRSA[0].myX) )< 10)
+ 		{
+ 			myPX = myPX + (int)(Math.random()*100-50);
+ 		}
+		else if ((Math.abs(myPY - MRSA[1].myY) )< 10)
+ 		{
+ 			myPY = myPY + (int)(Math.random()*100-50);
+ 		}
+ 		else if (myPY >= 600)
+ 		{
+ 			myPY = 10;
+ 		}
+ 		else if (myPX >= 600)
+ 		{
+ 			myPX = 10;
+ 		}
+ 		else if (myPY <= 0) 
+ 		{
+ 			myPY = 590;
+ 		}
+ 		else if (myPX <= 0)
+ 		{
+ 			myPX = 590;
+ 		}
  	}
  	void show ()
  	{
  		noStroke();
  		fill (myR,myG,myB);
- 		rect (myX,myY,15,15);
+ 		rect (myPX,myPY,15,15);
  	}
   }
