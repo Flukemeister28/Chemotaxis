@@ -85,11 +85,91 @@ Prey Antelope;
  	}
  	void move ()
  	{
- 		if ((Math.abs(myPX - MRSA[0].myX) )< 10)
+ 		if ((Math.abs(myPX - MRSA[1].myX) )< 10)
  		{
  			myPX = myPX + (int)(Math.random()*100-50);
  		}
 		else if ((Math.abs(myPY - MRSA[1].myY) )< 10)
+ 		{
+ 			myPY = myPY + (int)(Math.random()*100-50);
+ 		}
+ 		if ((Math.abs(myPX - MRSA[0].myX) )< 10)
+ 		{
+ 			myPX = myPX + (int)(Math.random()*100-50);
+ 		}
+		else if ((Math.abs(myPY - MRSA[0].myY) )< 10)
+ 		{
+ 			myPY = myPY + (int)(Math.random()*100-50);
+ 		}
+ 		if ((Math.abs(myPX - MRSA[2].myX) )< 10)
+ 		{
+ 			myPX = myPX + (int)(Math.random()*100-50);
+ 		}
+		else if ((Math.abs(myPY - MRSA[2].myY) )< 10)
+ 		{
+ 			myPY = myPY + (int)(Math.random()*100-50);
+ 		}
+ 		if ((Math.abs(myPX - MRSA[3].myX) )< 10)
+ 		{
+ 			myPX = myPX + (int)(Math.random()*100-50);
+ 		}
+		else if ((Math.abs(myPY - MRSA[3].myY) )< 10)
+ 		{
+ 			myPY = myPY + (int)(Math.random()*100-50);
+ 		}
+ 		if ((Math.abs(myPX - MRSA[3].myX) )< 10)
+ 		{
+ 			myPX = myPX + (int)(Math.random()*100-50);
+ 		}
+		else if ((Math.abs(myPY - MRSA[3].myY) )< 10)
+ 		{
+ 			myPY = myPY + (int)(Math.random()*100-50);
+ 		}
+ 		if ((Math.abs(myPX - MRSA[4].myX) )< 10)
+ 		{
+ 			myPX = myPX + (int)(Math.random()*100-50);
+ 		}
+		else if ((Math.abs(myPY - MRSA[4].myY) )< 10)
+ 		{
+ 			myPY = myPY + (int)(Math.random()*100-50);
+ 		}
+ 		if ((Math.abs(myPX - MRSA[5].myX) )< 10)
+ 		{
+ 			myPX = myPX + (int)(Math.random()*100-50);
+ 		}
+		else if ((Math.abs(myPY - MRSA[5].myY) )< 10)
+ 		{
+ 			myPY = myPY + (int)(Math.random()*100-50);
+ 		}
+ 		if ((Math.abs(myPX - MRSA[6].myX) )< 10)
+ 		{
+ 			myPX = myPX + (int)(Math.random()*100-50);
+ 		}
+		else if ((Math.abs(myPY - MRSA[6].myY) )< 10)
+ 		{
+ 			myPY = myPY + (int)(Math.random()*100-50);
+ 		}
+ 		if ((Math.abs(myPX - MRSA[7].myX) )< 10)
+ 		{
+ 			myPX = myPX + (int)(Math.random()*100-50);
+ 		}
+		else if ((Math.abs(myPY - MRSA[7].myY) )< 10)
+ 		{
+ 			myPY = myPY + (int)(Math.random()*100-50);
+ 		}
+ 		if ((Math.abs(myPX - MRSA[8].myX) )< 10)
+ 		{
+ 			myPX = myPX + (int)(Math.random()*100-50);
+ 		}
+		else if ((Math.abs(myPY - MRSA[8].myY) )< 10)
+ 		{
+ 			myPY = myPY + (int)(Math.random()*100-50);
+ 		}
+ 		if ((Math.abs(myPX - MRSA[9].myX) )< 10)
+ 		{
+ 			myPX = myPX + (int)(Math.random()*100-50);
+ 		}
+		else if ((Math.abs(myPY - MRSA[9].myY) )< 10)
  		{
  			myPY = myPY + (int)(Math.random()*100-50);
  		}
