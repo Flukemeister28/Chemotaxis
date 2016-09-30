@@ -27,7 +27,7 @@ Prey Antelope;
  void mousePressed()
  {
  	redraw();
- 	MRSA = new Bacteria[10];
+ 	MRSA = new Bacteria[100];
  	for (int i = 0; i <MRSA.length; i++)
  	{
  		MRSA[i] = new Bacteria ((int)(Math.random()*600),(int)(Math.random()*600));
@@ -114,62 +114,6 @@ Prey Antelope;
  			myPX = myPX + (int)(Math.random()*100-50);
  		}
 		else if ((Math.abs(myPY - MRSA[3].myY) )< 10)
- 		{
- 			myPY = myPY + (int)(Math.random()*100-50);
- 		}
- 		if ((Math.abs(myPX - MRSA[3].myX) )< 10)
- 		{
- 			myPX = myPX + (int)(Math.random()*100-50);
- 		}
-		else if ((Math.abs(myPY - MRSA[3].myY) )< 10)
- 		{
- 			myPY = myPY + (int)(Math.random()*100-50);
- 		}
- 		if ((Math.abs(myPX - MRSA[4].myX) )< 10)
- 		{
- 			myPX = myPX + (int)(Math.random()*100-50);
- 		}
-		else if ((Math.abs(myPY - MRSA[4].myY) )< 10)
- 		{
- 			myPY = myPY + (int)(Math.random()*100-50);
- 		}
- 		if ((Math.abs(myPX - MRSA[5].myX) )< 10)
- 		{
- 			myPX = myPX + (int)(Math.random()*100-50);
- 		}
-		else if ((Math.abs(myPY - MRSA[5].myY) )< 10)
- 		{
- 			myPY = myPY + (int)(Math.random()*100-50);
- 		}
- 		if ((Math.abs(myPX - MRSA[6].myX) )< 10)
- 		{
- 			myPX = myPX + (int)(Math.random()*100-50);
- 		}
-		else if ((Math.abs(myPY - MRSA[6].myY) )< 10)
- 		{
- 			myPY = myPY + (int)(Math.random()*100-50);
- 		}
- 		if ((Math.abs(myPX - MRSA[7].myX) )< 10)
- 		{
- 			myPX = myPX + (int)(Math.random()*100-50);
- 		}
-		else if ((Math.abs(myPY - MRSA[7].myY) )< 10)
- 		{
- 			myPY = myPY + (int)(Math.random()*100-50);
- 		}
- 		if ((Math.abs(myPX - MRSA[8].myX) )< 10)
- 		{
- 			myPX = myPX + (int)(Math.random()*100-50);
- 		}
-		else if ((Math.abs(myPY - MRSA[8].myY) )< 10)
- 		{
- 			myPY = myPY + (int)(Math.random()*100-50);
- 		}
- 		if ((Math.abs(myPX - MRSA[9].myX) )< 10)
- 		{
- 			myPX = myPX + (int)(Math.random()*100-50);
- 		}
-		else if ((Math.abs(myPY - MRSA[9].myY) )< 10)
  		{
  			myPY = myPY + (int)(Math.random()*100-50);
  		}
